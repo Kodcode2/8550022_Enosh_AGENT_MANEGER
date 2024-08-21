@@ -1,5 +1,6 @@
 
 using AgentsRest.Data;
+using AgentsRest.Service;
 using Microsoft.EntityFrameworkCore;
 
 namespace AgentsRest
@@ -21,6 +22,11 @@ namespace AgentsRest
                         )
                     )
                 );
+
+            builder.Services.AddScoped<ITargetService, TargetService>();
+            builder.Services.AddScoped<IAgentService, AgentService>();
+            builder.Services.AddHttpClient();
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

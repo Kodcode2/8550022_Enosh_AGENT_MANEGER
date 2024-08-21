@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AgentsRest.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace AgentsRest.Data
 {
@@ -8,7 +9,26 @@ namespace AgentsRest.Data
         {
         }
 
+        public DbSet<AgentModel> Agents { get; set; }
+        public DbSet<TargetModel> Targets { get; set; }
+        public DbSet<MissonModel> Missons { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<MissonModel>()
+                .HasOne(a => a.Agent)
+                .WithMany()
+                .HasForeignKey(m => m.AgentId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<MissonModel>()
+                .HasOne(a => a.Target)
+                .WithMany()
+                .HasForeignKey(m => m.TagetId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+
+        }
 
     }
 }
