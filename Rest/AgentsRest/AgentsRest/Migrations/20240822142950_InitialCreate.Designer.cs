@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AgentsRest.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240822113842_InitialCreate")]
+    [Migration("20240822142950_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -95,6 +95,9 @@ namespace AgentsRest.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("InMission")
+                        .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .IsRequired()

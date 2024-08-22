@@ -46,43 +46,24 @@ namespace AgentsRest.Service
             }
         }
 
-        public async Task? CreateMission()
+        public async Task CreateMission(AgentModel agent, TargetModel target)
         {
             try
             {
-                var agents = await dbContext.Agents.Where(a => a.Status == StatusAgent.Sleep).ToListAsync();
-                var targets = await dbContext.Targets.Where(t => t.Status == StatusTarget.Live).ToListAsync();
-                var range = GetRange(200);
-                var allmission = await dbContext.Missons.ToListAsync();
-                for (int i = 0; i < agents.Count; i++)
+                var rangeAgentFromTarget = GetRangeAgentFromTarget(agent.X, agent.Y, target.X, target.Y);
+                
+                target.InMission = StatusMission.Active;
+                
+                await dbContext.Missons.AddAsync(new()
                 {
-                    int agentX = agents[i].X;
-                    int agentY = agents[i].Y;  
-                    for (int j = 0; j < targets.Count; j++)
-                    {
-                        int targetX = targets[j].X;
-                        int targetY = targets[j].Y;
+                    AgentId = agent.Id,
+                    TargetId = target.Id,
+                    TimeRemaind = CalcTime(rangeAgentFromTarget),
+                    EndTime = DateTime.Now.AddHours(CalcTime(rangeAgentFromTarget))
 
-                        if (allmission.Any(m => m.TargetId == targets[j].Id && m.AgentId == agents[i].Id))
-                        {
-                            continue;
-                        }
-                        if (AgentIsInRange(agentX, agentY, targetX, targetY, range))
-                        {
-                            var rangeAgentFromTarget = GetRangeAgentFromTarget(agentX, agentY, targetX, targetY);
-                            await dbContext.Missons.AddAsync(new()
-                            {
-                                AgentId = agents[i].Id,
-                                TargetId = targets[j].Id,
-                                TimeRemaind = CalcTime(rangeAgentFromTarget),
-                                EndTime = DateTime.Now.AddHours(CalcTime(rangeAgentFromTarget))
-
-                            });                            
-                            await dbContext.SaveChangesAsync();
-                        }
-                        
-                    }
-                }
+                });                  
+                
+                await dbContext.SaveChangesAsync(); 
 
             }
             catch (Exception ex)
@@ -91,7 +72,24 @@ namespace AgentsRest.Service
             }
         }
 
-        
+
+        public async Task CreateMissionByAgent(AgentModel agent)
+        {
+            var range = GetRange(200);
+            
+            var targets = await dbContext.Targets.Where(t => t.Status == StatusTarget.Live && t.InMission == StatusMission.InActive).ToListAsync();
+
+            targets.Where(t => AgentIsInRange(agent.X, agent.Y, t.X, t.Y, range)).Select(t => CreateMission(agent, t));
+        }
+
+        public async Task CreateMissionByTarget(TargetModel target)
+        {
+            var range = GetRange(200);
+            var Agents = await dbContext.Agents.Where(a => a.Status == StatusAgent.Sleep).ToListAsync();
+            Agents.Where(a => AgentIsInRange(a.X, a.Y, target.X, target.Y, range)).Select(a => CreateMission(a, target));
+        }
+
+
         public async Task UpdateMissions()
         {
             var activeMission = await dbContext.Missons

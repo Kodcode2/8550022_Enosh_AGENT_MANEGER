@@ -38,6 +38,7 @@ namespace AgentsRest.Migrations
                     Position = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PhotoUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    InMission = table.Column<int>(type: "int", nullable: false),
                     X = table.Column<int>(type: "int", nullable: false),
                     Y = table.Column<int>(type: "int", nullable: false)
                 },

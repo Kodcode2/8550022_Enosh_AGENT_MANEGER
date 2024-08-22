@@ -4,10 +4,6 @@ namespace AgentsRest.Utils
 {
     public static class MoveByOrder
     {
-        public static bool NumIsPusitive(int num) => num >= 0;
-
-
-
 
         public static (int difrenceX, int difrenceY) ReturnDiferenceAgentFromTarget
             (int AgentX, int AgentY, int TargetX, int TargetY)
@@ -19,6 +15,27 @@ namespace AgentsRest.Utils
 
         public static string TheCorrectDirction(int difrenceX, int difrenceY)
         {
+            string res = "";
+            switch (difrenceY)
+            {
+                case > 0:
+                    res += "n";
+                    break;
+                case < 0:
+                    res += "s";
+                    break;
+            }
+            switch (difrenceX)
+            {
+                case  > 0 :
+                    res += "w";
+                    break;
+                case < 0:
+                    res += "e";
+                    break;
+            }
+            return res;
+            /*
             if (difrenceX == difrenceY)
             {
                 if (NumIsPusitive(difrenceX) && NumIsPusitive(difrenceY))
@@ -84,7 +101,7 @@ namespace AgentsRest.Utils
                 {
                     return "w";
                 }
-            }
+            }*/
             throw new Exception("not valid parameter");
 
         }

@@ -8,7 +8,9 @@ namespace AgentsRest.Service
     {
         Task<List<MissonModel>> GetMissions();
         Task<MissonModel> UpdateMissionStatus(int id, MissionDto missionDto);
-        Task? CreateMission();
+        Task CreateMissionByTarget(TargetModel target);
+        Task CreateMissionByAgent(AgentModel agent);
+        Task CreateMission(AgentModel agent, TargetModel target);
         Task UpdateMissions();
     }
 

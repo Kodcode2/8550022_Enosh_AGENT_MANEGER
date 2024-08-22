@@ -53,7 +53,7 @@ namespace AgentsRest.Service
                 target.Y = locationDto.y;
 
                 await dbContext.SaveChangesAsync();
-                await missionService.CreateMission();
+                await missionService.CreateMissionByTarget(target);
                 return target;
             }
             catch (Exception ex)
@@ -78,7 +78,7 @@ namespace AgentsRest.Service
                 var newLocation = GetUpdateDitection(target.X, target.Y, directionDto.direction);
                 target.X = newLocation.Item1;
                 target.Y = newLocation.Item2;
-                await missionService.CreateMission();
+                await missionService.CreateMissionByTarget(target);
                 await dbContext.SaveChangesAsync();
                 return target;
 
