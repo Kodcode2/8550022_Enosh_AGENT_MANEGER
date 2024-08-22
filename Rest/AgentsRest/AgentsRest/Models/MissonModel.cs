@@ -10,10 +10,10 @@
     {
         public int Id { get; set; }
         public int AgentId { get; set; }
-        public int TagetId { get; set; }
+        public int TargetId { get; set; }
         public StatusMisson Status { get; set; } = StatusMisson.NotActive;
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
+        public double TimeRemaind { get; set; }
+        public DateTime EndTime { get; set; } = DateTime.Now;
         public AgentModel Agent { get; set; }
         public TargetModel Target { get; set; }
 

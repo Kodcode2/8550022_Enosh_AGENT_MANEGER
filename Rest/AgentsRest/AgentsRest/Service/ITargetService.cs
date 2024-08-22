@@ -8,5 +8,6 @@ namespace AgentsRest.Service
         Task<List<TargetModel>> GetTargets();
         Task<TargetModel>? CreateTarget(TargetDto targetDto);
         Task<TargetModel> SetTargetLocation(int id, LocationDto locationDto);
+        Task<TargetModel> UpdateTargetLocation(int id, DirectionDto directionDto);
     }
 }

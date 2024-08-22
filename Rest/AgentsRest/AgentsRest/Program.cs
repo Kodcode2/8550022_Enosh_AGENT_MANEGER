@@ -25,6 +25,7 @@ namespace AgentsRest
 
             builder.Services.AddScoped<ITargetService, TargetService>();
             builder.Services.AddScoped<IAgentService, AgentService>();
+            builder.Services.AddScoped<IMissionService, MissionService>();
             builder.Services.AddHttpClient();
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

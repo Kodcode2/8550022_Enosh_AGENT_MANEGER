@@ -8,9 +8,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AgentsRest.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
-    public class TargetsController(IHttpClientFactory clientFactory, ITargetService targetService) : ControllerBase
+    public class TargetsController(ITargetService targetService) : ControllerBase
     {
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -64,6 +64,24 @@ namespace AgentsRest.Controllers
             {
                 return NotFound(ex.Message);
             }
+        }
+
+        [HttpPut("{id}/move")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult> UpdateAgentLocation(int id, [FromBody] DirectionDto directionDto)
+        {
+            try
+            {
+                var t = await targetService.UpdateTargetLocation(id, directionDto);
+                return Created("sucses", t);
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+
+
         }
 
 

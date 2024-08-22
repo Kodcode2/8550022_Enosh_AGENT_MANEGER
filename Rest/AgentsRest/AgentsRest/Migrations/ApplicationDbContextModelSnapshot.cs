@@ -38,8 +38,9 @@ namespace AgentsRest.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("X")
                         .HasColumnType("int");
@@ -66,20 +67,20 @@ namespace AgentsRest.Migrations
                     b.Property<DateTime>("EndTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("StartTime")
-                        .HasColumnType("datetime2");
-
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
-                    b.Property<int>("TagetId")
+                    b.Property<int>("TargetId")
                         .HasColumnType("int");
+
+                    b.Property<double>("TimeRemaind")
+                        .HasColumnType("float");
 
                     b.HasKey("Id");
 
                     b.HasIndex("AgentId");
 
-                    b.HasIndex("TagetId");
+                    b.HasIndex("TargetId");
 
                     b.ToTable("Missons");
                 });
@@ -104,8 +105,9 @@ namespace AgentsRest.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("X")
                         .HasColumnType("int");
@@ -128,7 +130,7 @@ namespace AgentsRest.Migrations
 
                     b.HasOne("AgentsRest.Models.TargetModel", "Target")
                         .WithMany()
-                        .HasForeignKey("TagetId")
+                        .HasForeignKey("TargetId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 

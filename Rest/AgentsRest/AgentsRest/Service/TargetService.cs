@@ -3,10 +3,11 @@ using AgentsRest.Data;
 using AgentsRest.Dto;
 using AgentsRest.Models;
 using Microsoft.EntityFrameworkCore;
+using static AgentsRest.Utils.DictionaryPublic;
 
 namespace AgentsRest.Service
 {
-    public class TargetService(ApplicationDbContext dbContext) : ITargetService
+    public class TargetService(ApplicationDbContext dbContext, IMissionService missionService) : ITargetService
     {
         public async Task<TargetModel>? CreateTarget(TargetDto targetDto)
         {
@@ -15,7 +16,7 @@ namespace AgentsRest.Service
                 TargetModel target = new()
                 {
                     Name = targetDto.name,
-                    PhotoUrl = targetDto.photo_url,
+                    PhotoUrl = targetDto.PhotoUrl,
                     Position = targetDto.position
                 };
                 await dbContext.Targets.AddAsync(target);
@@ -50,7 +51,9 @@ namespace AgentsRest.Service
                 }
                 target.X = locationDto.x;
                 target.Y = locationDto.y;
+
                 await dbContext.SaveChangesAsync();
+                await missionService.CreateMission();
                 return target;
             }
             catch (Exception ex)
@@ -58,6 +61,34 @@ namespace AgentsRest.Service
                 throw new Exception(ex.Message);
             }
             
+        }
+        public async Task<TargetModel> UpdateTargetLocation(int id, DirectionDto directionDto)
+        {
+            try
+            {
+                TargetModel? target = await dbContext.Targets.FirstOrDefaultAsync(x => x.Id == id);
+                if (target == null)
+                {
+                    throw new Exception("agent not faound");
+                }
+                /*if (agent.Status == StatusAgent.Active)
+                {
+                    throw new Exception("agent is active");
+                }*/
+                var newLocation = GetUpdateDitection(target.X, target.Y, directionDto.direction);
+                target.X = newLocation.Item1;
+                target.Y = newLocation.Item2;
+                await missionService.CreateMission();
+                await dbContext.SaveChangesAsync();
+                return target;
+
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
         }
     }
 }
