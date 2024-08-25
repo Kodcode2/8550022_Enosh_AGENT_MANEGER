@@ -10,8 +10,10 @@ namespace AgentsRest.Service
         Task<MissonModel> UpdateMissionStatus(int id, MissionDto missionDto);
         Task CreateMissionByTarget(TargetModel target);
         Task CreateMissionByAgent(AgentModel agent);
-        Task CreateMission(AgentModel agent, TargetModel target);
-        Task UpdateMissions();
+        Task<List<MissonModel>> UpdateMissions();
+        Task DeleteIfNotInRange();
+
+
     }
 
 }

@@ -52,6 +52,7 @@ namespace AgentsRest.Service
                 agent.Y = locationDto.y;
                 await dbContext.SaveChangesAsync();
                 await missionService.CreateMissionByAgent(agent);
+                await missionService.DeleteIfNotInRange();
                 return agent;
             }
             catch (Exception ex)
@@ -77,6 +78,7 @@ namespace AgentsRest.Service
                 agent.X = newLocation.Item1;
                 agent.Y = newLocation.Item2;
                 await missionService.CreateMissionByAgent(agent);
+                await missionService.DeleteIfNotInRange();
                 await dbContext.SaveChangesAsync();
                 return agent;
 

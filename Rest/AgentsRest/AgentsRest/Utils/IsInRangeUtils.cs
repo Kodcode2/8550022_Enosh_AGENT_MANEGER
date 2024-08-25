@@ -3,11 +3,7 @@ namespace AgentsRest.Utils
 {
     public static class IsInRangeUtils
     {
-        public static double GetRange(double range)
-        {
-            var r = Math.Sqrt(Math.Pow(range, 2));
-            return r;
-        }
+        public static double GetRange(double range) => Math.Sqrt(Math.Pow(range, 2));
         public static double GetRangeAgentFromTarget(int AgentX, int AgentY, int TargetX, int TargetY)
         {
             var distance = Math.Sqrt((Math.Pow(AgentX - TargetX, 2) + Math.Pow(AgentY - AgentY, 2)));

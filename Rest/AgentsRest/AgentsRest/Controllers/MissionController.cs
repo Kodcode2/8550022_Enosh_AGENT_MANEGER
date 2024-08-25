@@ -48,12 +48,12 @@ namespace AgentsRest.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
-        public async Task<ActionResult> UpdateAllMission()
+        public async Task<ActionResult<List<MissonModel>>> UpdateAllMission()
         {
             try
             {
-                await missionService.UpdateMissions();
-                return Ok();
+                var Missions = await missionService.UpdateMissions();
+                return Ok(Missions);
             }
             catch (Exception ex)
             {

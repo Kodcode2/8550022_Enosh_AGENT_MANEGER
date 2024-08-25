@@ -16,11 +16,11 @@ namespace AgentsRest
             builder.Services.AddControllers();
 
             builder.Services.AddDbContext<ApplicationDbContext>(
-                    options => options.UseSqlServer(
-                        builder.Configuration.GetConnectionString(
-                            "DefaultConnection"
-                        )
-                    )
+                    (sp, options) =>
+                    {
+                        var configuration = sp.GetRequiredService<IConfiguration>();
+                        options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
+                    }, ServiceLifetime.Scoped
                 );
 
             builder.Services.AddScoped<ITargetService, TargetService>();
