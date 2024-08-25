@@ -81,7 +81,7 @@ namespace AgentsRest.Service
                 target.X = newLocation.Item1;
                 target.Y = newLocation.Item2;
                 await missionService.CreateMissionByTarget(target);
-                await dbContext.SaveChangesAsync();
+                await missionService.DeleteIfNotInRange();
                 await dbContext.SaveChangesAsync();
                 return target;
 

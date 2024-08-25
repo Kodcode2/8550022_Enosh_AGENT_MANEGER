@@ -21,6 +21,14 @@ namespace AgentsRest.Data
                 .HasForeignKey(m => m.AgentId)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            /*modelBuilder.Entity<TargetModel>()
+                .HasMany(a => a.Missons)
+                .WithMany();
+
+            modelBuilder.Entity<AgentModel>()
+               .HasMany(a => a.Missons)
+               .WithMany();*/
+
             modelBuilder.Entity<MissonModel>()
                 .HasOne(a => a.Target)
                 .WithMany()
@@ -36,6 +44,11 @@ namespace AgentsRest.Data
                 .Property(x => x.Status)
                 .HasConversion<string>()
                 .IsRequired();
+            modelBuilder.Entity<MissonModel>()
+                .Property(x => x.Status)
+                .HasConversion<string>()
+                .IsRequired();
+
 
 
         }

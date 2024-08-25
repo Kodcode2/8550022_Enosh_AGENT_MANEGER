@@ -17,7 +17,8 @@ namespace AgentsRest.Service
         public async Task<List<MissonModel>> GetMissions()
         {
             var _context = DbContextFactory.CreateDbContext(serviceProvider);
-            var a = await _context.Missons.ToListAsync();
+            var a = await _context.Missons.Include(m => m.Agent)
+                .Include(m => m.Target).ToListAsync();
             if (a != null || a.Count != 0)
             {
                 return a;

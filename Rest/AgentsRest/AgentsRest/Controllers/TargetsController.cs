@@ -16,12 +16,12 @@ namespace AgentsRest.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         
-        public async Task<ActionResult<List<AgentModel>>> GetAgents()
+        public async Task<ActionResult<List<TargetModel>>> GetTargets()
         {
             try
             {
-                var agents = await targetService.GetTargets();
-                return Ok(agents);
+                var targets = await targetService.GetTargets();
+                return Ok(targets);
             }
             catch (Exception ex)
             {
