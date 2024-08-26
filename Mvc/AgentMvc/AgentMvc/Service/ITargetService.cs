@@ -4,6 +4,8 @@ namespace AgentMvc.Service
 {
     public interface ITargetService
     {
-        Task<List<TargetModel>> GetTargets();
+        List<TargetModel> GetTargets();
+        int GetTargetDeadCount();
+        int GetTargetLiveCount();
     }
 }

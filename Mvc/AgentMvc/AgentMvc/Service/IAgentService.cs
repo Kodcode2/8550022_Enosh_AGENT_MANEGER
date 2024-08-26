@@ -6,6 +6,12 @@ namespace AgentMvc.Service
 {
     public interface IAgentService
     {
-        Task<List<AgentVM>> GetAgents();
+        List<AgentVM> GetAgents();
+
+        int GetAgentCount();
+        int GetAgentActiveCount();
+        int GetAgentSleepCount();
+
+
     }
 }

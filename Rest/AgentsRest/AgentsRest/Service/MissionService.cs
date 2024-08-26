@@ -62,20 +62,6 @@ namespace AgentsRest.Service
             }
         }
 
-        private async Task CreateMission(AgentModel agent, TargetModel target)
-        {
-            try
-            {
-                await _semaphore.WaitAsync();
-                await CreateMissionIfNotExixtElseUpdate(agent, target);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-        }
-
-
         public async Task CreateMissionByAgent(AgentModel agent)
         {
             var _context = DbContextFactory.CreateDbContext(serviceProvider);
@@ -92,7 +78,6 @@ namespace AgentsRest.Service
             //await dbContext.SaveChangesAsync();
         }
 
-
         public async Task CreateMissionByTarget(TargetModel target)
         {
             var _context = DbContextFactory.CreateDbContext(serviceProvider);
@@ -102,6 +87,50 @@ namespace AgentsRest.Service
             var tasks = agentInRange.Select(async a => await CreateMission(a, target)).ToArray();
 
             Task.WaitAll(tasks);
+            await _context.SaveChangesAsync();
+        }
+
+        private async Task CreateMission(AgentModel agent, TargetModel target)
+        {
+            try
+            {
+                /*await _semaphore.WaitAsync();*/
+                await CreateMissionIfNotExixtElseUpdate(agent, target);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        private async Task CreateMissionIfNotExixtElseUpdate(AgentModel agent, TargetModel target)
+        {
+            var _context = DbContextFactory.CreateDbContext(serviceProvider);
+            var missions = await _context.Missons.ToListAsync();
+
+            //if(AgentAndTargetInActiveMission(agent.Id, target.Id, missions)){return; }  
+
+            var rangeAgentFromTarget = GetRangeAgentFromTarget(agent.X, agent.Y, target.X, target.Y);
+            var mission = missions.Where(m => m.AgentId == agent.Id && m.TargetId == target.Id).FirstOrDefault();
+
+            if (missions.Count != 0 && AgentAndTargetInActiveMission(agent.Id, target.Id, missions) || AgentAndTargetInMission(agent.Id, target.Id, missions))
+            {
+               // var misson = await _context.Missons.FirstOrDefaultAsync(m => m.AgentId == agent.Id && m.TargetId == target.Id);
+                mission.TimeRemaind = CalcTime(rangeAgentFromTarget);
+                mission.EndTime = DateTime.Now.AddHours(CalcTime(rangeAgentFromTarget));
+            }
+            else
+            {
+                await _context.Missons.AddAsync(new()
+                {
+                    AgentId = agent.Id,
+                    TargetId = target.Id,
+                    TimeRemaind = CalcTime(rangeAgentFromTarget),
+                    EndTime = DateTime.Now.AddHours(CalcTime(rangeAgentFromTarget))
+
+                });
+
+            }
             await _context.SaveChangesAsync();
         }
 
@@ -117,6 +146,7 @@ namespace AgentsRest.Service
             if (activeMission != null)
             {
                 activeMission.ForEach(UpdateMission);
+                
                 await _context.SaveChangesAsync();
             }
             return activeMission.Any() ? activeMission : [];
@@ -152,35 +182,6 @@ namespace AgentsRest.Service
 
         }
 
-        private async Task CreateMissionIfNotExixtElseUpdate(AgentModel agent, TargetModel target)
-        {
-            var _context = DbContextFactory.CreateDbContext(serviceProvider);
-            var missions = await _context.Missons.ToListAsync();
-
-            //if(AgentAndTargetInActiveMission(agent.Id, target.Id, missions)){return; }  
-
-            var rangeAgentFromTarget = GetRangeAgentFromTarget(agent.X, agent.Y, target.X, target.Y);
-            var mission = missions.Where(m => m.AgentId == agent.Id && m.TargetId == target.Id).FirstOrDefault();
-
-            if (missions.Count != 0 && AgentAndTargetInActiveMission(agent.Id, target.Id, missions) || AgentAndTargetInMission(agent.Id, target.Id, missions))
-            {
-                mission.TimeRemaind = CalcTime(rangeAgentFromTarget);
-                mission.EndTime = DateTime.Now.AddHours(CalcTime(rangeAgentFromTarget));
-            }
-            else
-            {
-                await _context.Missons.AddAsync(new()
-                {
-                    AgentId = agent.Id,
-                    TargetId = target.Id,
-                    TimeRemaind = CalcTime(rangeAgentFromTarget),
-                    EndTime = DateTime.Now.AddHours(CalcTime(rangeAgentFromTarget))
-
-                });
-
-            }
-            await _context.SaveChangesAsync();
-        }
 
         private bool AgentAndTargetInActiveMission(int agentId, int targetId, List<MissonModel> missons)
         {
@@ -192,6 +193,8 @@ namespace AgentsRest.Service
         {
             var agent = mission.Agent;
             var target = mission.Target;
+            mission.TimeRemaind = CalcTime(GetRangeAgentFromTarget(agent.X, agent.Y, target.X, target.Y));
+            mission.EndTime = DateTime.Now.AddHours(GetRangeAgentFromTarget(agent.X, agent.Y, target.X, target.Y));
             var res = ReturnDiferenceAgentFromTarget(agent.X, agent.Y, target.X, target.Y);
             var dirction = TheCorrectDirction(res.Item1, res.Item2);
             if (dirction != "")

@@ -1,0 +1,219 @@
+﻿@model AgentMvc.ViewModel.AllGeneralDeshbord
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.generalDashboard.FirstOrDefault().SumAgents)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.generalDashboard.FirstOrDefault().SumAgentsActive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.generalDashboard.FirstOrDefault().SumTargets)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.generalDashboard.FirstOrDefault().SumTargetsKilled)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.generalDashboard.FirstOrDefault().SumMissions)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.generalDashboard.FirstOrDefault().SumMissionsAssigned)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.generalDashboard.FirstOrDefault().CompareAgentsToTargets)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.generalDashboard.FirstOrDefault().CompareAgentsDormantsToTargets)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.generalDashboard)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SumAgents)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SumAgentsActive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SumTargets)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SumTargetsKilled)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SumMissions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SumMissionsAssigned)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompareAgentsToTargets)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompareAgentsDormantsToTargets)
+            </td>
+            
+        </tr>
+}
+    </tbody>
+</table>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.agentVMs.FirstOrDefault().PhotoUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.agentVMs.FirstOrDefault().Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.agentVMs.FirstOrDefault().NickName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.agentVMs.FirstOrDefault().Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.agentVMs.FirstOrDefault().X)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.agentVMs.FirstOrDefault().Y)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.agentVMs.FirstOrDefault().MissionLink)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.agentVMs.FirstOrDefault().TimeToEnd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.agentVMs.FirstOrDefault().KillingAmount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.agentVMs)
+        {
+            <tr>
+                <td>
+                    <img src="@Html.DisplayFor(modelItem => item.PhotoUrl)" alt="Alternate Text" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NickName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.X)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Y)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MissionLink)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TimeToEnd)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KillingAmount)
+                </td>
+                <td>
+                    @if (item.Status == StatusAgent.Active)
+                    {
+                        @Html.ActionLink("Details", "Index", "Mission", new { id = item.Id })
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.targets.FirstOrDefault().PhotoUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.targets.FirstOrDefault().Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.targets.FirstOrDefault().Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.targets.FirstOrDefault().Position)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.targets.FirstOrDefault().Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.targets.FirstOrDefault().InMission)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.targets.FirstOrDefault().X)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.targets.FirstOrDefault().Y)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.targets)
+        {
+            <tr>
+                <td>
+                    <img src="@Html.DisplayFor(modelItem => item.PhotoUrl)" alt="Alternate Text" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Position)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.InMission)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.X)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Y)
+                </td>
+                <td>
+                    @if(item.InMission == StatusMission.Active)
+                    {
+                        @Html.ActionLink("Details", "Index","Mission", new { id = item.Id })
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

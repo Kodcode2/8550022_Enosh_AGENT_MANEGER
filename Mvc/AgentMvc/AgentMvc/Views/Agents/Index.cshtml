@@ -46,13 +46,13 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                    <img src="@Html.DisplayFor(modelItem => item.PhotoUrl)" alt="Alternate Text" />
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Id)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.NickName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PhotoUrl)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Status)

@@ -1,0 +1,89 @@
+﻿@model IEnumerable<AgentMvc.ViewModel.MissionVM>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.distance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AgentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AgentX)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AgentY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TargetName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TargetX)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TargetY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TimeRemaind)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.distance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgentName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgentX)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgentY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TargetName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TargetX)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TargetY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeRemaind)
+            </td>
+            <td>
+                
+                @Html.ActionLink("Details", "Details", new { id=item.Id })|
+                @Html.ActionLink("Assigned", "Assigned", new { id = item.Id })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

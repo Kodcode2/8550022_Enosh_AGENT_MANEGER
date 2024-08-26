@@ -4,33 +4,37 @@ using AgentMvc.ViewModel;
 using System.Text;
 using System.Net.Http;
 using System.Reflection;
+using AgentMvc.Service;
+using Microsoft.Extensions.Logging;
 
 namespace AgentMvc.Service
 {
-    public class AgentService : IAgentService
+    public class AgentService(IHttpClientFactory clientFactory, IDataStore dataStore) : IAgentService
     {
         private readonly string baseUrl = "https://localhost:7154";
 
-        public List<AgentModel> _agents = [];
+        
 
-
-        public async Task<List<AgentVM>> GetAgents()
+        public List<AgentVM> GetAgents()
         {
-            var httpClient = clientFactory.CreateClient();
-            var request = new HttpRequestMessage(HttpMethod.Get, $"{baseUrl}/Agents");
-     
-            var result = await httpClient.SendAsync(request);
-            List<AgentModel>? agents;
-            List<AgentVM> agentsVM = [];
-            if (result.IsSuccessStatusCode)
-            {
-                var content = await result.Content.ReadAsStringAsync();
-                agents = JsonSerializer.Deserialize<List<AgentModel>>(
-                content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
-                agentsVM = ConvertAgentToVm(agents);
-                _agents = agents;
-            }
-            return agentsVM;
+            var agents = dataStore.AllAgents;
+
+            var t = ConvertAgentToVm(agents); 
+
+            return t;
+        }
+
+        public int GetAgentCount()
+        {
+            return dataStore.AllAgents.Count;
+        }
+        public int GetAgentActiveCount()
+        {
+            return dataStore.AllAgents.Count(a => a.Status == StatusAgent.Active);
+        }
+        public int GetAgentSleepCount()
+        {
+            return dataStore.AllAgents.Count(a => a.Status == StatusAgent.Sleep);
         }
 
 
@@ -45,19 +49,29 @@ namespace AgentMvc.Service
                 Status = x.Status,
                 X = x.X,
                 Y = x.Y,
+                TimeToEnd = GetMissionSpeed(x.Id),
+                KillingAmount = KillsAmount(x.Id)
 
             }).ToList();
         }
-        /*private AgentVM UpdatedAgentToVm(AgentVM agent, List<MissonModel> missons)
+
+        private double GetMissionSpeed(int agentId)
         {
-            
-            var agentMission = missons.Where(missons => missons.AgentId == agent.Id).ToList();
-            var mission = agentMission.FirstOrDefault(m => m.Status == StatusMisson.Active);
-            agent.TimeToEnd = mission.TimeRemaind;
-            agent.KillingAmount == agentMission.Where(m => m.Status == StatusMisson.Finished).ToList().Count();
+            var agent = dataStore.AllMission.FirstOrDefault(m => m.AgentId == agentId && m.Status == StatusMisson.Active);
+            return agent != null ? agent.TimeRemaind : 0; 
+        }
+
+        private int KillsAmount(int agentId)
+        {
+            var agent = dataStore.AllMission.Where(m => m.AgentId == agentId && m.Status == StatusMisson.Finished).ToList();
+            var res = agent.Count != 0 ? agent.Count : 0;
+            return res;
+        }
 
 
-        }*/
+
+
+
 
     }
 }

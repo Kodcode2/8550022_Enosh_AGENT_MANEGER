@@ -7,8 +7,8 @@ namespace AgentMvc.Controllers
     {
         public async Task<IActionResult> Index()
         {
-            var agents = await agentService.GetAgents();
-            return View(agents);
+            //var agents = await agentService.GetAgentsFromDb();
+            return View(agentService.GetAgents());
         }
     }
 }

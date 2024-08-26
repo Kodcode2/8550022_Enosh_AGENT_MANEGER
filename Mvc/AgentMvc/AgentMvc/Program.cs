@@ -1,3 +1,4 @@
+using AgentMvc.Models;
 using AgentMvc.Service;
 
 namespace AgentMvc
@@ -14,6 +15,10 @@ namespace AgentMvc
             builder.Services.AddScoped<IAgentService, AgentService>();
             builder.Services.AddScoped<IMissionSevice, MissionService>();
             builder.Services.AddScoped<ITargetService, TargetService>();
+            builder.Services.AddScoped<IGeneralDashboardService, GeneralDashboardService>();
+            builder.Services.AddSingleton<IDataStore, InMemryDataStore>();
+            
+            builder.Services.AddHostedService<BackroundDataService>();
 
             var app = builder.Build();
 

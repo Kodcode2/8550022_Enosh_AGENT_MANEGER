@@ -7,7 +7,7 @@ namespace AgentsRest.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class MissionController(IMissionService missionService) : ControllerBase
+    public class missionsController(IMissionService missionService) : ControllerBase
     {
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -44,7 +44,7 @@ namespace AgentsRest.Controllers
 
         }
 
-        [HttpPut("update")]
+        [HttpPost("update")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
 

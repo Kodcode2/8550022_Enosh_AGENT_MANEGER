@@ -6,79 +6,32 @@ namespace AgentMvc.Controllers
 {
     public class MissionController(IMissionSevice missionSevice) : Controller
     {
-        // GET: MissionController
-        public ActionResult Index()
+        
+        public IActionResult Index()
         {
-            return View();
+            var a = missionSevice.GetMissiosVM();
+            return View(a);
         }
 
-        // GET: MissionController/Details/5
-        public ActionResult Details(int id)
+        
+        public IActionResult Details(int id)
         {
-            return View();
+            var a = missionSevice.GetMissiosVM().FirstOrDefault(m=> m.Id == id);
+            return View(a);
         }
 
-        // GET: MissionController/Create
-        public ActionResult Create()
+        
+        
+        public async Task<IActionResult> Assigned(int id)
         {
-            return View();
-        }
-
-        // POST: MissionController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
+            var res = await missionSevice.AssignedMission(id);
+            if (res != null)
             {
-                return RedirectToAction(nameof(Index));
+                return View("MissionComplate");
             }
-            catch
-            {
-                return View();
-            }
+            return View("MissionFaild");
         }
 
-        // GET: MissionController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: MissionController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: MissionController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: MissionController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+       
     }
 }

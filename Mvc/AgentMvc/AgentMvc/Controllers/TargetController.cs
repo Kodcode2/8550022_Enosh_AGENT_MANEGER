@@ -9,8 +9,8 @@ namespace AgentMvc.Controllers
         // GET: TargetController
         public async Task<IActionResult> Index()
         {
-            var Targets = await targetService.GetTargets();
-            return View(Targets);
+            var t = targetService.GetTargets();
+            return View(t);
         }
 
         // GET: TargetController/Details/5

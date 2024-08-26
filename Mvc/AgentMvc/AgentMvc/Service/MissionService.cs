@@ -1,42 +1,78 @@
-﻿using AgentMvc.Models;
+﻿using AgentMvc.Dto;
+using AgentMvc.Models;
 using AgentMvc.ViewModel;
 using System.Reflection;
 using System.Text.Json;
 
 namespace AgentMvc.Service
 {
-    public class MissionService : IMissionSevice
+    public class MissionService(IHttpClientFactory _clientFactory, IDataStore dataStore) : IMissionSevice
     {
-        private readonly string baseUrl = "https://localhost:7154/Mission";
-        public List<MissonModel> _missions;
-        private IHttpClientFactory _clientFactory;
+        private readonly string baseUrl = "https://localhost:7154";
 
-        private  MissionService(IHttpClientFactory clientFactory)
+        
+
+        public List<MissionVM> GetMissiosVM()
         {
-            _clientFactory = clientFactory;
+            var _missions = dataStore.AllMission;
+
+            return _missions.Select(ConvertToVm).ToList();
         }
 
-        public async Task<List<MissonModel>> GetMissions()
+        private MissionVM ConvertToVm(MissonModel model)
+        {
+            return new MissionVM {
+                Id = model.Id,
+                agentId = model.AgentId,
+                Status = model.Status,
+                distance = model.TimeRemaind * 5,
+                AgentName = model.Agent.NickName,
+                AgentX = model.Agent.X,
+                AgentY = model.Agent.Y,
+                TargetName = model.Target.Name ,
+                TargetX = model.Target.X ,
+                TargetY = model.Target.Y,
+                TimeRemaind = model.TimeRemaind
+             };
+        }
+
+
+        public int GetMissionCount()
+        {
+            return dataStore.AllMission.Count;
+        }
+
+        public int GetActiveMissionCount()
+        {
+            return dataStore.AllMission.Count(m => m.Status == StatusMisson.Active);
+        }
+        public int GetFinshedMissionCount()
+        {
+            return dataStore.AllMission.Count(m => m.Status == StatusMisson.Finished);
+        }
+
+        public async Task<MissionVM?> AssignedMission(int missionId)
         {
             var httpClient = _clientFactory.CreateClient();
-            var request = new HttpRequestMessage(HttpMethod.Get, $"{baseUrl}/Agents");
+            var missionRequest = new HttpRequestMessage(HttpMethod.Put, $"{baseUrl}/Missions/{missionId}");
 
-            var result = await httpClient.SendAsync(request);
-            List<MissonModel>? missions;
+            missionRequest.Content = JsonContent.Create(new MissionDto { status = "assigned" });
 
-            if (result.IsSuccessStatusCode)
+            var missionResolt = await httpClient.SendAsync(missionRequest);
+            if (missionResolt.IsSuccessStatusCode)
             {
-                var content = await result.Content.ReadAsStringAsync();
-                missions = JsonSerializer.Deserialize<List<MissonModel>>(
-                content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
-                _missions = missions ?? [];
+                return GetMissiosVM().FirstOrDefault(m => m.Id == missionId);
             }
-            return _missions ?? [];
+            return null;
         }
 
-        public double GetHowMenyAgentActive()
+        public double GetMissionSpeed(int agentId)
         {
-            
+            return GetMissiosVM().FirstOrDefault(m => m.agentId == agentId).TimeRemaind;
+        }
+        public int GetKillsAmount(int agentId)
+        {
+            return GetMissiosVM().Where(m => m.agentId == agentId).Count(a => a.Status == StatusMisson.Finished);
         }
     }
 }
