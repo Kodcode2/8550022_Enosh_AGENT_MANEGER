@@ -67,7 +67,7 @@ namespace AgentsRest.Service
             var _context = DbContextFactory.CreateDbContext(serviceProvider);
             var range = GetRange(200);
 
-            var targets = await _context.Targets.Where(t => t.Status == StatusTarget.Live && t.InMission == StatusMission.InActive).ToListAsync();
+            var targets = await _context.Targets.Where(t => t.Status == StatusTarget.Live && t.InMission == StatusMission.InActive && t.X < -1 && t.Y < -1).ToListAsync();
 
             var targetInRange = targets.Where(t => AgentIsInRange(agent.X, agent.Y, t.X, t.Y, range)).ToList();
 
@@ -82,7 +82,7 @@ namespace AgentsRest.Service
         {
             var _context = DbContextFactory.CreateDbContext(serviceProvider);
             var range = GetRange(200);
-            var Agents = await _context.Agents.Where(a => a.Status == StatusAgent.Sleep).ToListAsync();
+            var Agents = await _context.Agents.Where(a => a.Status == StatusAgent.Sleep && a.X > -1 && a.Y > -1).ToListAsync();
             var agentInRange = Agents.Where(a => AgentIsInRange(a.X, a.Y, target.X, target.Y, range)).ToList();
             var tasks = agentInRange.Select(async a => await CreateMission(a, target)).ToArray();
 
@@ -113,7 +113,7 @@ namespace AgentsRest.Service
             var rangeAgentFromTarget = GetRangeAgentFromTarget(agent.X, agent.Y, target.X, target.Y);
             var mission = missions.Where(m => m.AgentId == agent.Id && m.TargetId == target.Id).FirstOrDefault();
 
-            if (missions.Count != 0 && AgentAndTargetInActiveMission(agent.Id, target.Id, missions) || AgentAndTargetInMission(agent.Id, target.Id, missions))
+            if (missions.Count != 0 && AgentAndTargetInMission(agent.Id, target.Id, missions))
             {
                // var misson = await _context.Missons.FirstOrDefaultAsync(m => m.AgentId == agent.Id && m.TargetId == target.Id);
                 mission.TimeRemaind = CalcTime(rangeAgentFromTarget);

@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A64B9912-5639-489E-9B82-7DECC34F7019}|AgentMvc\\AgentMvc.csproj|c:\\users\\menac\\source\\repos\\agentsexem\\mvc\\agentmvc\\agentmvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A64B9912-5639-489E-9B82-7DECC34F7019}|AgentMvc\\AgentMvc.csproj|solutionrelative:agentmvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A64B9912-5639-489E-9B82-7DECC34F7019}|AgentMvc\\AgentMvc.csproj|c:\\users\\menac\\source\\repos\\agentsexem\\mvc\\agentmvc\\agentmvc\\views\\metrix\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A64B9912-5639-489E-9B82-7DECC34F7019}|AgentMvc\\AgentMvc.csproj|solutionrelative:agentmvc\\views\\metrix\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -107,10 +111,6 @@
       "RelativeMoniker": "D:0:0:{A64B9912-5639-489E-9B82-7DECC34F7019}|AgentMvc\\AgentMvc.csproj|solutionrelative:agentmvc\\controllers\\targetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A64B9912-5639-489E-9B82-7DECC34F7019}|AgentMvc\\AgentMvc.csproj|c:\\users\\menac\\source\\repos\\agentsexem\\mvc\\agentmvc\\agentmvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A64B9912-5639-489E-9B82-7DECC34F7019}|AgentMvc\\AgentMvc.csproj|solutionrelative:agentmvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A64B9912-5639-489E-9B82-7DECC34F7019}|AgentMvc\\AgentMvc.csproj|c:\\users\\menac\\source\\repos\\agentsexem\\mvc\\agentmvc\\agentmvc\\controllers\\agentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A64B9912-5639-489E-9B82-7DECC34F7019}|AgentMvc\\AgentMvc.csproj|solutionrelative:agentmvc\\controllers\\agentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -150,11 +150,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MissionService.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Service\\MissionService.cs",
               "RelativeDocumentMoniker": "AgentMvc\\Service\\MissionService.cs",
@@ -163,12 +163,11 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-25T13:26:56.829Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AgentService.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Service\\AgentService.cs",
               "RelativeDocumentMoniker": "AgentMvc\\Service\\AgentService.cs",
@@ -177,18 +176,17 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAADgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-25T12:56:31.728Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Views\\Metrix\\Index.cshtml",
               "RelativeDocumentMoniker": "AgentMvc\\Views\\Metrix\\Index.cshtml",
               "ToolTip": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Views\\Metrix\\Index.cshtml",
               "RelativeToolTip": "AgentMvc\\Views\\Metrix\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAMAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-27T07:25:29.038Z",
               "EditorCaption": ""
@@ -196,19 +194,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "MetrixController.cs",
-              "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Controllers\\MetrixController.cs",
-              "RelativeDocumentMoniker": "AgentMvc\\Controllers\\MetrixController.cs",
-              "ToolTip": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Controllers\\MetrixController.cs",
-              "RelativeToolTip": "AgentMvc\\Controllers\\MetrixController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-27T07:10:54.325Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "BackroundDataService.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Service\\BackroundDataService.cs",
               "RelativeDocumentMoniker": "AgentMvc\\Service\\BackroundDataService.cs",
@@ -216,12 +201,11 @@
               "RelativeToolTip": "AgentMvc\\Service\\BackroundDataService.cs",
               "ViewState": "AQIAAAQAAAAAAAAAAAAkwBUAAABZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T11:46:03.301Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-26T11:46:03.301Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "GeneralDashboardService.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Service\\GeneralDashboardService.cs",
               "RelativeDocumentMoniker": "AgentMvc\\Service\\GeneralDashboardService.cs",
@@ -229,12 +213,11 @@
               "RelativeToolTip": "AgentMvc\\Service\\GeneralDashboardService.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAQwAwAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T07:21:35.674Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-26T07:21:35.674Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "MissionController.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Controllers\\MissionController.cs",
               "RelativeDocumentMoniker": "AgentMvc\\Controllers\\MissionController.cs",
@@ -246,7 +229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "IDataStore.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Service\\IDataStore.cs",
               "RelativeDocumentMoniker": "AgentMvc\\Service\\IDataStore.cs",
@@ -254,12 +237,11 @@
               "RelativeToolTip": "AgentMvc\\Service\\IDataStore.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAiwAwAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T10:47:30.407Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-26T10:47:30.407Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "InMemryDataStore.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Service\\InMemryDataStore.cs",
               "RelativeDocumentMoniker": "AgentMvc\\Service\\InMemryDataStore.cs",
@@ -267,12 +249,36 @@
               "RelativeToolTip": "AgentMvc\\Service\\InMemryDataStore.cs",
               "ViewState": "AQIAACEAAAAAAAAAAAAYwDQAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T10:49:52.59Z",
+              "WhenOpened": "2024-08-26T10:49:52.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "AgentMvc\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "AgentMvc\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAABMAAAAAAAAAAAAAACIAAAB3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-25T13:30:38.867Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 7,
+              "Title": "MetrixController.cs",
+              "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Controllers\\MetrixController.cs",
+              "RelativeDocumentMoniker": "AgentMvc\\Controllers\\MetrixController.cs",
+              "ToolTip": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Controllers\\MetrixController.cs",
+              "RelativeToolTip": "AgentMvc\\Controllers\\MetrixController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T07:10:54.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "MissionDto.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Dto\\MissionDto.cs",
               "RelativeDocumentMoniker": "AgentMvc\\Dto\\MissionDto.cs",
@@ -284,7 +290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "AgentMvc\\Controllers\\HomeController.cs",
@@ -296,7 +302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "MissionFaild.cshtml",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Views\\Mission\\MissionFaild.cshtml",
               "RelativeDocumentMoniker": "AgentMvc\\Views\\Mission\\MissionFaild.cshtml",
@@ -308,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Views\\Mission\\Index.cshtml",
               "RelativeDocumentMoniker": "AgentMvc\\Views\\Mission\\Index.cshtml",
@@ -320,7 +326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Views\\Mission\\Details.cshtml",
               "RelativeDocumentMoniker": "AgentMvc\\Views\\Mission\\Details.cshtml",
@@ -332,7 +338,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "DashboardController.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Controllers\\DashboardController.cs",
               "RelativeDocumentMoniker": "AgentMvc\\Controllers\\DashboardController.cs",
@@ -344,7 +350,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "AgentVM.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\ViewModel\\AgentVM.cs",
               "RelativeDocumentMoniker": "AgentMvc\\ViewModel\\AgentVM.cs",
@@ -356,7 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "MissionVM.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\ViewModel\\MissionVM.cs",
               "RelativeDocumentMoniker": "AgentMvc\\ViewModel\\MissionVM.cs",
@@ -368,7 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "IMissionSevice.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Service\\IMissionSevice.cs",
               "RelativeDocumentMoniker": "AgentMvc\\Service\\IMissionSevice.cs",
@@ -392,7 +398,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Program.cs",
               "RelativeDocumentMoniker": "AgentMvc\\Program.cs",
@@ -404,7 +410,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Views\\Dashboard\\Index.cshtml",
               "RelativeDocumentMoniker": "AgentMvc\\Views\\Dashboard\\Index.cshtml",
@@ -416,7 +422,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Views\\Target\\Index.cshtml",
               "RelativeDocumentMoniker": "AgentMvc\\Views\\Target\\Index.cshtml",
@@ -428,7 +434,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "AllGeneralDeshbord.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\ViewModel\\AllGeneralDeshbord.cs",
               "RelativeDocumentMoniker": "AgentMvc\\ViewModel\\AllGeneralDeshbord.cs",
@@ -440,7 +446,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "IGeneralDashboardService.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Service\\IGeneralDashboardService.cs",
               "RelativeDocumentMoniker": "AgentMvc\\Service\\IGeneralDashboardService.cs",
@@ -452,7 +458,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "TargetController.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Controllers\\TargetController.cs",
               "RelativeDocumentMoniker": "AgentMvc\\Controllers\\TargetController.cs",
@@ -488,7 +494,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "GeneralDashboard.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\ViewModel\\GeneralDashboard.cs",
               "RelativeDocumentMoniker": "AgentMvc\\ViewModel\\GeneralDashboard.cs",
@@ -512,7 +518,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Views\\Agents\\Index.cshtml",
               "RelativeDocumentMoniker": "AgentMvc\\Views\\Agents\\Index.cshtml",
@@ -545,18 +551,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-08-25T12:23:05.1Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "AgentMvc\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Mvc\\AgentMvc\\AgentMvc\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "AgentMvc\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAABkAAABfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-25T13:30:38.867Z"
             },
             {
               "$type": "Document",
