@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{59CDAFC3-ED05-4FA0-9B41-2C41C673E5D5}|AgentsRest\\AgentsRest.csproj|c:\\users\\menac\\source\\repos\\agentsexem\\rest\\agentsrest\\agentsrest\\dto\\logintoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59CDAFC3-ED05-4FA0-9B41-2C41C673E5D5}|AgentsRest\\AgentsRest.csproj|solutionrelative:agentsrest\\dto\\logintoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CDAFC3-ED05-4FA0-9B41-2C41C673E5D5}|AgentsRest\\AgentsRest.csproj|c:\\users\\menac\\source\\repos\\agentsexem\\rest\\agentsrest\\agentsrest\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59CDAFC3-ED05-4FA0-9B41-2C41C673E5D5}|AgentsRest\\AgentsRest.csproj|solutionrelative:agentsrest\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CDAFC3-ED05-4FA0-9B41-2C41C673E5D5}|AgentsRest\\AgentsRest.csproj|c:\\users\\menac\\source\\repos\\agentsexem\\rest\\agentsrest\\agentsrest\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59CDAFC3-ED05-4FA0-9B41-2C41C673E5D5}|AgentsRest\\AgentsRest.csproj|solutionrelative:agentsrest\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CDAFC3-ED05-4FA0-9B41-2C41C673E5D5}|AgentsRest\\AgentsRest.csproj|c:\\users\\menac\\source\\repos\\agentsexem\\rest\\agentsrest\\agentsrest\\service\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59CDAFC3-ED05-4FA0-9B41-2C41C673E5D5}|AgentsRest\\AgentsRest.csproj|solutionrelative:agentsrest\\service\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CDAFC3-ED05-4FA0-9B41-2C41C673E5D5}|AgentsRest\\AgentsRest.csproj|c:\\users\\menac\\source\\repos\\agentsexem\\rest\\agentsrest\\agentsrest\\service\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59CDAFC3-ED05-4FA0-9B41-2C41C673E5D5}|AgentsRest\\AgentsRest.csproj|solutionrelative:agentsrest\\service\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CDAFC3-ED05-4FA0-9B41-2C41C673E5D5}|AgentsRest\\AgentsRest.csproj|c:\\users\\menac\\source\\repos\\agentsexem\\rest\\agentsrest\\agentsrest\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{59CDAFC3-ED05-4FA0-9B41-2C41C673E5D5}|AgentsRest\\AgentsRest.csproj|solutionrelative:agentsrest\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{59CDAFC3-ED05-4FA0-9B41-2C41C673E5D5}|AgentsRest\\AgentsRest.csproj|c:\\users\\menac\\source\\repos\\agentsexem\\rest\\agentsrest\\agentsrest\\service\\missionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{59CDAFC3-ED05-4FA0-9B41-2C41C673E5D5}|AgentsRest\\AgentsRest.csproj|solutionrelative:agentsrest\\service\\missionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -82,24 +106,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "missionsController.cs",
-              "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Controllers\\missionsController.cs",
-              "RelativeDocumentMoniker": "AgentsRest\\Controllers\\missionsController.cs",
-              "ToolTip": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Controllers\\missionsController.cs",
-              "RelativeToolTip": "AgentsRest\\Controllers\\missionsController.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAowDYAAAAQAAAA",
+              "DocumentIndex": 0,
+              "Title": "LoginToken.cs",
+              "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Dto\\LoginToken.cs",
+              "RelativeDocumentMoniker": "AgentsRest\\Dto\\LoginToken.cs",
+              "ToolTip": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Dto\\LoginToken.cs",
+              "RelativeToolTip": "AgentsRest\\Dto\\LoginToken.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T14:13:50.829Z",
+              "WhenOpened": "2024-08-27T06:26:16.078Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 1,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "AgentsRest\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "AgentsRest\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T06:25:03.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Dto\\LoginDto.cs",
+              "RelativeDocumentMoniker": "AgentsRest\\Dto\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Dto\\LoginDto.cs",
+              "RelativeToolTip": "AgentsRest\\Dto\\LoginDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T06:23:54.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Service\\JwtService.cs",
+              "RelativeDocumentMoniker": "AgentsRest\\Service\\JwtService.cs",
+              "ToolTip": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Service\\JwtService.cs",
+              "RelativeToolTip": "AgentsRest\\Service\\JwtService.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAgwB8AAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T06:22:43.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IJwtService.cs",
+              "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Service\\IJwtService.cs",
+              "RelativeDocumentMoniker": "AgentsRest\\Service\\IJwtService.cs",
+              "ToolTip": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Service\\IJwtService.cs",
+              "RelativeToolTip": "AgentsRest\\Service\\IJwtService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T06:22:13.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\appsettings.json",
+              "RelativeDocumentMoniker": "AgentsRest\\appsettings.json",
+              "ToolTip": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\appsettings.json",
+              "RelativeToolTip": "AgentsRest\\appsettings.json",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAAA4AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-27T06:21:35.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "MissionDto.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Dto\\MissionDto.cs",
               "RelativeDocumentMoniker": "AgentsRest\\Dto\\MissionDto.cs",
@@ -112,20 +201,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 19,
               "Title": "20240825161751_initialCreate.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Migrations\\20240825161751_initialCreate.cs",
               "RelativeDocumentMoniker": "AgentsRest\\Migrations\\20240825161751_initialCreate.cs",
               "ToolTip": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Migrations\\20240825161751_initialCreate.cs",
               "RelativeToolTip": "AgentsRest\\Migrations\\20240825161751_initialCreate.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAIBJwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-25T16:17:51.191Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
+              "Title": "MissionService.cs",
+              "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Service\\MissionService.cs",
+              "RelativeDocumentMoniker": "AgentsRest\\Service\\MissionService.cs",
+              "ToolTip": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Service\\MissionService.cs",
+              "RelativeToolTip": "AgentsRest\\Service\\MissionService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHcAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T06:39:35.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "AgentsRest\\Data\\ApplicationDbContext.cs",
@@ -138,7 +240,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
+              "Title": "missionsController.cs",
+              "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Controllers\\missionsController.cs",
+              "RelativeDocumentMoniker": "AgentsRest\\Controllers\\missionsController.cs",
+              "ToolTip": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Controllers\\missionsController.cs",
+              "RelativeToolTip": "AgentsRest\\Controllers\\missionsController.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAowDYAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T14:13:50.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "AgentModel.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Models\\AgentModel.cs",
               "RelativeDocumentMoniker": "AgentsRest\\Models\\AgentModel.cs",
@@ -151,7 +266,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "AgentsController.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Controllers\\AgentsController.cs",
               "RelativeDocumentMoniker": "AgentsRest\\Controllers\\AgentsController.cs",
@@ -164,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "TargetService.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Service\\TargetService.cs",
               "RelativeDocumentMoniker": "AgentsRest\\Service\\TargetService.cs",
@@ -177,20 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MissionService.cs",
-              "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Service\\MissionService.cs",
-              "RelativeDocumentMoniker": "AgentsRest\\Service\\MissionService.cs",
-              "ToolTip": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Service\\MissionService.cs",
-              "RelativeToolTip": "AgentsRest\\Service\\MissionService.cs",
-              "ViewState": "AQIAAFAAAAAAAAAAAAA0wHcAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T06:39:35.455Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "TargetModel.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Models\\TargetModel.cs",
               "RelativeDocumentMoniker": "AgentsRest\\Models\\TargetModel.cs",
@@ -203,7 +305,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "AgentService.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Service\\AgentService.cs",
               "RelativeDocumentMoniker": "AgentsRest\\Service\\AgentService.cs",
@@ -216,31 +318,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "20240825155812_initialCreate.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Migrations\\20240825155812_initialCreate.cs",
               "RelativeDocumentMoniker": "AgentsRest\\Migrations\\20240825155812_initialCreate.cs",
               "ToolTip": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Migrations\\20240825155812_initialCreate.cs",
               "RelativeToolTip": "AgentsRest\\Migrations\\20240825155812_initialCreate.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-25T15:58:12.441Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 21,
               "Title": "20240825160617_initialCreate.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Migrations\\20240825160617_initialCreate.cs",
               "RelativeDocumentMoniker": "AgentsRest\\Migrations\\20240825160617_initialCreate.cs",
               "ToolTip": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Migrations\\20240825160617_initialCreate.cs",
               "RelativeToolTip": "AgentsRest\\Migrations\\20240825160617_initialCreate.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-25T16:06:17.598Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "AgentsRest\\Properties\\launchSettings.json",
@@ -253,7 +353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "MissonModel.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Models\\MissonModel.cs",
               "RelativeDocumentMoniker": "AgentsRest\\Models\\MissonModel.cs",
@@ -266,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 18,
               "Title": "IMissionService.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Service\\IMissionService.cs",
               "RelativeDocumentMoniker": "AgentsRest\\Service\\IMissionService.cs",
@@ -279,20 +379,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Program.cs",
               "RelativeDocumentMoniker": "AgentsRest\\Program.cs",
               "ToolTip": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Program.cs",
               "RelativeToolTip": "AgentsRest\\Program.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAAUAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAIBJwBMAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-21T11:18:42.363Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 23,
               "Title": "MoveByOrder.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Utils\\MoveByOrder.cs",
               "RelativeDocumentMoniker": "AgentsRest\\Utils\\MoveByOrder.cs",
@@ -300,11 +400,12 @@
               "RelativeToolTip": "AgentsRest\\Utils\\MoveByOrder.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAgwBsAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T07:04:58.356Z"
+              "WhenOpened": "2024-08-22T07:04:58.356Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 22,
               "Title": "AgentDto.cs",
               "DocumentMoniker": "C:\\Users\\menac\\source\\repos\\AgentsExem\\Rest\\AgentsRest\\AgentsRest\\Dto\\AgentDto.cs",
               "RelativeDocumentMoniker": "AgentsRest\\Dto\\AgentDto.cs",
@@ -312,7 +413,8 @@
               "RelativeToolTip": "AgentsRest\\Dto\\AgentDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-21T10:15:10.02Z"
+              "WhenOpened": "2024-08-21T10:15:10.02Z",
+              "EditorCaption": ""
             }
           ]
         }

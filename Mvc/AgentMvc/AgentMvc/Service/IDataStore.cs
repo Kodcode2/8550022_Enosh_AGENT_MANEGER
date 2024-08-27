@@ -10,5 +10,6 @@ namespace AgentMvc.Service
         void LoadMissions(List<MissonModel> missons);
         void LoadTargets(List<TargetModel> targets);
         void LoadAgents(List<AgentModel> agents);
+        public List<List<List<string>>> Metrix(List<TargetModel> targets, List<AgentModel> agents);
     }
 }

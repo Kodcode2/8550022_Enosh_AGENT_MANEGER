@@ -167,3 +167,4 @@ C:\Users\menac\source\repos\AgentsExem\Rest\AgentsRest\AgentsRest\obj\Debug\net8
 C:\Users\menac\source\repos\AgentsExem\Rest\AgentsRest\AgentsRest\obj\Debug\net8.0\AgentsRest.genruntimeconfig.cache
 C:\Users\menac\source\repos\AgentsExem\Rest\AgentsRest\AgentsRest\obj\Debug\net8.0\ref\AgentsRest.dll
 C:\Users\menac\source\repos\AgentsExem\Rest\AgentsRest\AgentsRest\obj\Debug\net8.0\AgentsRest.sourcelink.json
+C:\Users\menac\source\repos\AgentsExem\Rest\AgentsRest\AgentsRest\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

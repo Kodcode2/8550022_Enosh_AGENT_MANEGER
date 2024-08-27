@@ -22,5 +22,37 @@ namespace AgentMvc.Service
         {
             AllTarget = targets;
         }
+
+        public List<List<List<string>>> Metrix(List<TargetModel> targets, List<AgentModel> agents)
+        {
+            List<List<List<string>>> metrixList = [];
+            for (int i = 0; i < 100; i++)
+            {
+                metrixList.Add([]);
+            }
+            foreach (var metrix in metrixList)
+            {
+                for (int i = 0; i < 100; i++)
+                {
+                    metrix.Add([]);
+                }
+            }
+            targets.ForEach(t =>
+            {
+                if (t.Y < 100 && t.X < 100)
+                {
+                    
+                metrixList[t.Y][t.X].Add("T");
+                }
+            });
+            agents.ForEach(t =>
+            {
+                if (t.Y < 100 && t.X < 100)
+                {
+                    metrixList[t.Y][t.X].Add("A");
+                }
+            });
+            return metrixList;
+        }
     }
 }

@@ -1,0 +1,27 @@
+﻿@model List<List<List<string>>>
+
+@foreach (var item in Model)
+{
+	<div>
+
+	@foreach (var i in item)
+	{
+			<span>
+				@if (i.Count == 0)
+				{
+					<span>.</span>
+				}else if (i.Contains("T"))
+				{
+					<span>T</span>
+				}else if (i.Contains("A"))
+				{
+					<span>A</span>
+				}else
+				{
+					<span>B</span>
+				}
+
+			</span>
+	}
+	</div>
+} 
